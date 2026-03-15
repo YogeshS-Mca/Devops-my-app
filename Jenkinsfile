@@ -3,11 +3,11 @@ pipeline {
 
     stages {
 
-        stage('Clone Repository') {
-            steps {
-                git 'https://github.com/YogeshS-Mca/Devops-my-app.git'
-            }
-        }
+       stage('Clone Repository') {
+    steps {
+        git branch: 'main', url: 'https://github.com/YogeshS-Mca/Devops-my-app.git'
+    }
+}
 
         stage('Build Docker Image') {
             steps {
